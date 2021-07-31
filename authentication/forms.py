@@ -6,16 +6,18 @@ CustomUser = get_user_model
 
 
 class CustomUserCreationForm(UserCreationForm):
-    email = forms.CharField()
-    username = forms.CharField()
+    pass
+    # email = forms.CharField()
+    # username = forms.CharField()
 
-    class Meta:
-        model = CustomUser
-        fields = ('email', 'username', )
+    # class Meta:
+    #     model = CustomUser
+    #     fields = ('email', 'username', )
 
 
 class CustomUserChangeForm(UserChangeForm):
+    pass
 
-    class Meta:
-        model = CustomUser
-        fields = ('email', 'username', )
+    # class Meta:
+    #     model = CustomUser
+    #     fields = ('email', 'username', )
