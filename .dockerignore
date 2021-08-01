@@ -1,0 +1,10 @@
+# Ignore everything
+# **
+
+.git
+.cache
+*.md
+# ... except for dependencies and source
+!Pipfile
+!Pipfile.lock
+!Readme.md

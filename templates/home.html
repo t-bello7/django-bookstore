@@ -1,15 +1,18 @@
 {% extends '_base.html' %}
+{% load static %}
+
 {% block title %} Home {% endblock title %}
 
 {% block content %}
 <h1>HomePage</h1>
+<img class="bg" src="{% static 'images/bg.jpg'%}">
 {% if user.is_authenticated %}
-    Hi {{ user.email }}!
+    <p>Hi ,{{ user.email }}!</p>
+    <p>Why is it rendering horizontally</p>
     <p><a href="{% url 'logout'%}"></a></p>
 {% else %}
     <p> You are not logged in</p>
     <a href="{%url 'login'%}">Log In</a>
-    <a href="{%url 'signup'%}">Log In</a>
-
+    <a href="{%url 'signup'%}">Sign Up</a>
 {% endif %}
 {% endblock content %}
