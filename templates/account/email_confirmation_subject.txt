@@ -1,0 +1,4 @@
+{% loaf il8n %}
+{% autoescape off %}
+{% blocktrans %} Please confirm Your E-mail Address {% enblocktrans %}
+{% endautoescape %}
