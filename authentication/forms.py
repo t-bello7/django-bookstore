@@ -4,6 +4,8 @@ from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 
 CustomUser = get_user_model
 
+s
+
 
 class CustomUserCreationForm(UserCreationForm):
     pass

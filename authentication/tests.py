@@ -6,6 +6,7 @@ from .forms import CustomUserCreationForm
 from .views import SignUpPageView
 
 # Create your tests here.
+s
 
 
 class CustomUserTests(TestCase):
@@ -59,9 +60,10 @@ class CustomUserTests(TestCase):
                 self.username, self.email
             )
             self.assertEqual(get_user_model().objects.all().count(), 1)
-            self.assertEqual(get_user_model().objects.all()[0].username, self.username)
-            self.assertEqual(get_user_model().objects.all()[0].email, self.email)
-
+            self.assertEqual(get_user_model().objects.all()
+                             [0].username, self.username)
+            self.assertEqual(get_user_model().objects.all()
+                             [0].email, self.email)
 
         def test_signup_view(self):
             view = resolve('auth/signup')
