@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     # created app
     'pages',
     'authentication',
+    'books'
 ]
 
 SITE_ID = 1
@@ -154,3 +155,4 @@ STATICFILES_FINDERS = [
 
 DEFAULT_FROM_EMAIL = 'admin@djangobookstore.com'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'

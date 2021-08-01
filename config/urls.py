@@ -27,5 +27,5 @@ urlpatterns = [
     # local aoos
     # path('auth/', include('authentication.urls')),
     path('', include('pages.urls')),
-
+    path('books/', include('books.urls')),
 ]
