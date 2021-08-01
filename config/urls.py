@@ -21,10 +21,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     # Django built in auth app
-    path('auth/', include('django.contrib.auth.urls')),
+    # path('auth/', include('django.contrib.auth.urls')),
+    path('auth', include('allauth.urls')),
 
     # local aoos
-    path('auth/', include('authentication.urls')),
+    # path('auth/', include('authentication.urls')),
     path('', include('pages.urls')),
 
 ]

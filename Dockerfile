@@ -21,8 +21,8 @@ USER appuser
 RUN pip install --upgrade pip
 COPY Pipfile Pipfile.lock /code/
 RUN pip install pipenv && pipenv install --system
-COPY ./requirements.txt /code/requirements.txt
-RUN pipenv install -r requirements.txt
+# COPY ./requirements.txt /code/requirements.txt
+# RUN pipenv install -r requirements.txt
 
 # Copy project
 COPY . /code/
