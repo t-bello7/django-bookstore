@@ -3,7 +3,6 @@ import django.utils.timezone
 from django.db import migrations, models
 import django.contrib.auth.validators
 import django.contrib.auth.models
-a
 
 
 class Migration(migrations.Migration):

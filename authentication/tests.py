@@ -6,7 +6,6 @@ from .forms import CustomUserCreationForm
 from .views import SignUpPageView
 
 # Create your tests here.
-s
 
 
 class CustomUserTests(TestCase):
