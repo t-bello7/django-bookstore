@@ -8,6 +8,7 @@ django = "<4.0,>=3.0"
 psycopg2-binary = ">=2.8"
 django-crispy-forms = "*"
 django-allauth = "==0.41.0"
+pillow = "*"
 
 [dev-packages]
 
