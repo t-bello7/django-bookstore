@@ -10,20 +10,22 @@ ENV PATH="/home/appuser/.local/bin:${PATH}"
 
 # Set work directory
 WORKDIR /code 
-RUN useradd -ms /bin/bash appuser
-
-RUN chown -R appuser:appuser /code
-RUN chmod 755 /code
+RUN useradd -ms /bin/bash appuser 
+RUN    chown -R appuser:appuser /code
+RUN    chmod 755 /code
 USER appuser
 
 # Install dependencies
 # RUN apt-get update && apt-get install -y --no-install-recommends gcc
-RUN pip install --upgrade pip
-COPY Pipfile Pipfile.lock /code/
-RUN pip install pipenv && pipenv install --system
+COPY Pipfile Pipfile.lock /code/ 
+
+
+RUN pip install --upgrade pip \ 
+    pip install pipenv && pipenv install --system
+RUN pip uninstall pipenv -y
+
 # COPY ./requirements.txt /code/requirements.txt
 # RUN pipenv install -r requirements.txt
 
 # Copy project
 COPY . /code/
-CMD . "pipenv shell" 

@@ -6,7 +6,7 @@ from .forms import CustomUserCreationForm
 # Create your views here.
 
 
-class SignUpPageView(generic.CreateView):
-    form_class = CustomUserCreationForm
-    success_url = reverse_lazy('login')
-    template_name = 'registration/signup.html'
+# class SignUpPageView(generic.CreateView):
+#     form_class = CustomUserCreationForm
+#     success_url = reverse_lazy('login')
+#     template_name = 'registration/signup.html'

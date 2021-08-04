@@ -54,7 +54,8 @@ INSTALLED_APPS = [
     # created app
     'pages',
     'authentication',
-    'books'
+    'books',
+    'orders'
 ]
 
 SITE_ID = 1
@@ -159,3 +160,5 @@ STATICFILES_FINDERS = [
 DEFAULT_FROM_EMAIL = 'admin@djangobookstore.com'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+STRIPE_TEST_PUBLISHABLE_KEY = os.environ.get('STRIPE_TEST_PUBLISHABLE_KEY')
+STRIPE_TEST_SECRET_KEY = os.environ.get('STRIPE_TEST_SECRET_KEY')
