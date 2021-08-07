@@ -10,8 +10,9 @@ django-crispy-forms = "*"
 django-allauth = "==0.41.0"
 pillow = "*"
 stripe = "==2.41.0"
+django-debug-toolbar = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.7"
+python_version = "3.8.5"
