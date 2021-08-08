@@ -11,6 +11,10 @@ django-allauth = "==0.41.0"
 pillow = "*"
 stripe = "==2.41.0"
 django-debug-toolbar = "*"
+dj-database-url = "*"
+psycopg2 = "*"
+whitenoise = "*"
+gunicorn = "*"
 
 [dev-packages]
 

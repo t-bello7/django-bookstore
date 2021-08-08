@@ -21,7 +21,7 @@ from django.conf import settings
 
 urlpatterns = [
     # Django admin
-    path('superadmin/', admin.site.urls),
+    path('superadminh/', admin.site.urls),
 
     # Django built in auth app
     # path('auth/', include('django.contrib.auth.urls')),
