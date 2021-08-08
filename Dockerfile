@@ -11,12 +11,13 @@ ENV PATH="/home/appuser/.local/bin:${PATH}"
 # Set work directory
 WORKDIR /code 
 RUN useradd -ms /bin/bash appuser 
-RUN    chown -R appuser:appuser /code
-RUN    chmod 755 /code
+RUN chown -R appuser:appuser /code
+RUN chmod 755 /code
+RUN chmod 775 -R /home/appuser/.local/lib/python3.7
 USER appuser
 
 # Install dependencies
-# RUN apt-get update && apt-get install -y --no-install-recommends gcc
+# RUN apt-get updae && apt-get install -y --no-install-recommends gcc
 COPY Pipfile Pipfile.lock /code/ 
 
 
