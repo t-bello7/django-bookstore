@@ -13,7 +13,7 @@ WORKDIR /code
 RUN adduser appuser --disabled-password 
 RUN chown -R appuser:appuser /code
 RUN chmod 755 /code
-RUN chmod 775 -R /home/appuser/.local/lib/python3.7
+RUN sudo chmod 775 -R /home/appuser/.local/lib/python3.7
 USER appuser
 
 # Install dependencies
