@@ -2,7 +2,7 @@ version: "3.7"
 services:
   web:
     build: .
-    command: python /code/manage.py runserver 0.0.0.0:8000
+    command: gunicorn config.wsgi -b 0.0.0.0:8000
     environment:
       - SECRET_KEY=e!0#xt5#gx-l$vw@xm8=!rotmy(ucuv0_yhc^asx_zxqu@a#g_
       - ENVRIOMENT=production
