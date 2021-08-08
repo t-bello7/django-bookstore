@@ -13,8 +13,8 @@ WORKDIR /code
 RUN adduser appuser --disabled-password 
 RUN chown -R appuser:appuser /code
 RUN chmod 755 /code
-RUN sudo chmod 775 -R /home/appuser/.local/lib/python3.7
-USER appuser
+RUN chmod 775 -R /home/appuser/.local/lib/python3.7
+USER root
 
 # Install dependencies
 # RUN apt-get updae && apt-get install -y --no-install-recommends gcc
