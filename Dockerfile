@@ -10,7 +10,7 @@ ENV PATH="/home/appuser/.local/bin:${PATH}"
 
 # Set work directory
 WORKDIR /code 
-RUN useradd -ms /bin/bash appuser 
+RUN adduser appuser --disabled-password 
 RUN chown -R appuser:appuser /code
 RUN chmod 755 /code
 RUN chmod 775 -R /home/appuser/.local/lib/python3.7
