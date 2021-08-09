@@ -30,3 +30,4 @@ RUN pip uninstall pipenv -y
 
 # Copy project
 COPY . /code/
+CMD gunicorn config.wsgi:application --bind 0.0.0.0:$PORT
